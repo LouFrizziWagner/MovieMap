@@ -1,0 +1,33 @@
+/*
+    Base Stylesheet
+*/
+
+:root {
+    --background-color: #231927;
+    --text-color: #FAF9F6;
+    --secondary-color: #5D3449;
+    --accent-color: #F6B65E;
+
+    --center-max-width: 85%;
+}
+
+html, body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body {
+    padding-top: 4rem;
+    min-height: 70vh;
+}
+
+
+.center-container {
+    margin: 0 auto;
+    max-width: var(--center-max-width);
+}
+
+.section-padding {
+    padding: 3rem 0;
+}
