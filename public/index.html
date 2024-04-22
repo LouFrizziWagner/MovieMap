@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> MovieMap </title>
-    <link rel = "stylesheet" href="src/css/reset.css">
-    <link rel = "stylesheet" href="src/css/base.css">
+    <link rel = "stylesheet" href="css/reset.css">
+    <link rel = "stylesheet" href="css/base.css">
 
 
 </head>
@@ -14,7 +14,7 @@
     <header class="layout-header">
         <nav class="navbar center-container">
             <ul class="navbar-list">
-                <li><a href="#"> <img src="./assets/images/moviemap-logo.jpg" alt="MovieMap Logo" id="logo"/> </a></li>
+                <li><a href="#"> <!--<img src="./assets/images/moviemap-logo.jpg" alt="MovieMap Logo" id="logo">--> MovieMap </a></li>
                 <li><a href="#"> All movies </a></li>
                 <li><a href="#"> Saved movies </a></li>
             </ul>
@@ -22,37 +22,44 @@
     </header>
 
     <main>
+        <!--
         <section class="intro-hero-section">
-            <div class="text-container">
+            <div class="text-container center-container">
                 <h1>Welcome to MovieMap</h1>
-                <hr/>
                 <p>Discover recent movies</p>
 
             </div>
 
 
-        </section>
+        </section>-->
 
         <section class="section-padding">
             <div class="center-container">
 
+                <hr/>
+
+                <div class="text-container">
                 <h2>All movies</h2>
                 <p>Overview of currently playing movies</p>
+                </div>
 
-                <ul class="movie-list">
-                    <li class="movie-list-item">
-                        <img src="./assets/images/movie-cover-placeholder.jpg"/>
-                        <h3>Movie Example 1</h3>
-                        <p>Description </p>
-                        
-                    </li>
+                <div id="movieInfoModalWrapper" class="movie-info-modal-wrapper">
+
+                    <div id="movieInfoModal" class="movie-info-modal">
+
+                    </div>
+
+                </div>
+
+                <ul id="movieList" class="movie-list">
+
                 </ul>
 
             </div>
 
         </section>
 
-        <hr/>
+        <hr>
 
 
         <section class="section-padding">
@@ -71,9 +78,14 @@
 
     <footer class="footer-layout">
         <div class="center-container">
-            <p>&copy; 2024 MovieMap</p>
+            <p>© 2024 MovieMap</p>
         </div>
     </footer>
 
+
+
+<script src="js/front-end.js"></script> 
+
 </body>
 </html>
+
