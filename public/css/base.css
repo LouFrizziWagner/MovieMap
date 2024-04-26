@@ -3,8 +3,9 @@
 */
 
 :root {
-    --background-color: #231927;
+    --background-color: #231a26;
     --text-color: #FAF9F6;
+    --mute-color: #3a2a3f;
     --secondary-color: #5D3449;
     --accent-color: #F6B65E;
 
@@ -19,15 +20,17 @@ html, body {
 }
 
 body {
-    padding-top: 3rem;
+    line-height: 1.8;
 }
 
-a {
+a, em {
     color: var(--accent-color);
 }
 a:hover {
     color: var(--secondary-color);
 }
+
+strong { font-weight: bolder; }
 
 ::selection {
     background-color: var(--secondary-color);
@@ -64,15 +67,9 @@ hr {
     background-color: var(--secondary-color);
 }
 
-
 .layout-header {
-    position: fixed;
     width: 100%;
-    top: 0;
-    right: 0;
-    left: 0;
     background-color: var(--background-color);
-    z-index: 99999;
 }
 
 .layout-header .navbar .navbar-list {
@@ -81,137 +78,13 @@ hr {
     padding: 2rem 0;
 }
 
-
-/* Movie List */
-
-.movie-list {
-
-    display: grid;
-    grid-auto-flow: dense;
-    gap: 2rem;   
-    row-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); 
-    grid-template-rows: auto auto;
+.intro-hero-section {
+    padding: 2rem;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url('../assets/images/moviemap-hero-background.jpg');
+    background-position: bottom;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
-
-.movie-list-item {
-    grid-row: span 2;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: subgrid;
-    grid-template-areas: "movie-teaser-image"
-    "movie-title";
-    margin-bottom: 1.6rem;
-    cursor: pointer;
-
-    /*
-     "movie-release-date"
-    "movie-rating"
-    "movie-overview"*/ 
-}
-
-.movie-teaser-image-wrapper {
-    grid-area: movie-teaser-image;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)); /* Adjust opacity as needed */
-
-}
-.movie-teaser-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 4/5;
-    object-fit: contain;
-
-}
-
-.movie-title {
-    grid-area: movie-title;
-}
-.movie-release-date {
-    grid-area: movie-release-date;
-
-}
-
-.movie-rating {
-    grid-area: movie-rating;
-
-}
-
-.movie-overview {
-    grid-area: movie-overview;
-}
-
-/* User Interaction Hover Item */
-
-.movie-teaser-image-wrapper, .movie-teaser-image-wrapper img, .movie-title {
-    transition: all 0.4s ease;
-}
-
-.movie-list-item:hover .movie-teaser-image-wrapper img, .movie-list-item:hover .movie-teaser-image-wrapper {
-    filter: blur(1px)  brightness(50%);
-}
-.movie-list-item:hover .movie-title {
-    color: var(--secondary-color);
-}
-
-/* More Info Modal */
-
-.movie-info-modal-wrapper {
-    display: none;
-    position: fixed; 
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    overflow: auto;
-}
-
-.movie-info-modal {
-    background-color: var(--background-color);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 3rem;
-    border-radius: 5px;
-    display: flex;
-    gap: 3rem;
-
-    box-shadow:
-        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
-        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
-        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
-        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
-        100px 100px 80px rgba(0, 0, 0, 0.07);
-    
-}
-
-.movie-text-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.release-rating-info-wrapper {
-    display: flex;
-    gap: 3rem;
-}
-
-.release-rating-info-wrapper p{
-    background-color: var(--secondary-color);
-    padding: 4px;
-    border-radius: 4px;
-}
-
-.movie-info-modal img {
-    width: 260px;
-}
-
 
 
 .footer-layout {

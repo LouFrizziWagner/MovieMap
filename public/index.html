@@ -6,7 +6,8 @@
     <title> MovieMap </title>
     <link rel = "stylesheet" href="css/reset.css">
     <link rel = "stylesheet" href="css/base.css">
-
+    <link rel = "stylesheet" href="css/movie-list.css">
+    <link rel = "stylesheet" href="css/movie-modal.css">
 
 </head>
 <body>
@@ -14,41 +15,34 @@
     <header class="layout-header">
         <nav class="navbar center-container">
             <ul class="navbar-list">
-                <li><a href="#"> <!--<img src="./assets/images/moviemap-logo.jpg" alt="MovieMap Logo" id="logo">--> MovieMap </a></li>
-                <li><a href="#"> All movies </a></li>
-                <li><a href="#"> Saved movies </a></li>
+                <li> MovieMap </li>
+                <li><a href="#allMovies"> All movies </a></li>
+                <li><a href="#savedMovies"> Saved movies </a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!--
+        
         <section class="intro-hero-section">
             <div class="text-container center-container">
                 <h1>Welcome to MovieMap</h1>
                 <p>Discover recent movies</p>
 
             </div>
+        </section>
 
-
-        </section>-->
-
-        <section class="section-padding">
+        <section id="allMovies" class="section-padding">
             <div class="center-container">
-
-                <hr/>
-
                 <div class="text-container">
                 <h2>All movies</h2>
                 <p>Overview of currently playing movies</p>
                 </div>
 
                 <div id="movieInfoModalWrapper" class="movie-info-modal-wrapper">
-
                     <div id="movieInfoModal" class="movie-info-modal">
-
+                        <!-- movie attributes here -->
                     </div>
-
                 </div>
 
                 <ul id="movieList" class="movie-list">
@@ -62,7 +56,7 @@
         <hr>
 
 
-        <section class="section-padding">
+        <section  id="savedMovies" class="section-padding">
             <div class="center-container">
 
                 <h2>Saved movies</h2>
@@ -84,7 +78,9 @@
 
 
 
-<script src="js/front-end.js"></script> 
+<script type="module" src="scripts/movieList.js"></script> 
+<script type="module" src="scripts/movieModal.js"></script> 
+
 
 </body>
 </html>
