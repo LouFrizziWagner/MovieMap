@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-MovieMap is a movie information API built using Node.js and Express.js. It provides endpoints to fetch information about currently playing movies and reviews for specific movies. The data is sourced from The Movie Database (TMDb) API.
+MovieMap is a movie information API built using Node.js and Express.js. It provides endpoints to fetch information about currently playing movies and  their reviews. The data is sourced from The Movie Database (TMDb) API.
 
 ## Dependencies
 
@@ -51,20 +51,16 @@ To start the server, run `node app.js` in the terminal. By default, the server r
 
 ## Notes
 
-- unfinished: bookmarking and displaying bookmarked
+- *unfinished: bookmarking and displaying bookmarked*
 - The project aims to be as lean as possible while still providing clear project structure of separation of concerns, statelessness and modular, maintainable
-- This projects UI needs to be redone in terms of user friendlyness (number of clicks and scrolls to get somewhere) and colorscheme, icons instead of so much text, comments need to be substrings and expand on click, close movie overview needs to be available at all times
 - I would create html templates with custom params for components, for reusability
 - I would clean up the css naming and follow thru with SMACCS convention
 - I would provide a main.js handling the other front end scripts
 - Better file documentation
-
-## Contributors
-
-This project was developed by [Your Name] and contributions are welcome.
+- The project's UI needs to be redone in terms of user friendlieness (number of clicks and scrolls to get somewhere) and colorscheme, icons instead of so much text, comments need to be substrings and expand on click, close movie overview needs to be available at all times
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU General Public License v3.0. See the license file for details.
 
 For any questions or issues, please contact me.
