@@ -13,13 +13,33 @@ const BASE_URL = 'https://api.themoviedb.org/3';
 // API Endpoint to fetch now playing movies
 router.get('/now-playing', async (req, res) => {
     try {
-        const movies = await fetchNowPlayingMovies();
+        const movies =  await fetchNowPlayingMovies();
         res.json(movies);
     } catch (error) {
         console.error('Error at endpoint /now-playing:', error.message);
         res.status(500).json({ error: error.message });
     }
 });
+
+// Function to fetch currently playing movies
+async function fetchNowPlayingMovies() {
+    console.log("Attempting to fetch movies");
+    try {
+        const response = await axios.get(`${BASE_URL}/movie/now_playing`, {
+            params: {
+                api_key: API_KEY,
+                language: 'en-US',
+                page: 1
+            }
+        });
+        console.log("Movies fetched successfully:", response.data);
+        return response.data.results;
+    } catch (error) {
+        console.error('Error fetching now playing movies:', error.message, error.response ? error.response.data : 'No additional error info');
+        throw new Error('Failed to fetch now playing movies');
+    }
+}
+
 
 // Function to fetch reviews for a specific movie
 async function fetchMovieReviews(movieId) {
